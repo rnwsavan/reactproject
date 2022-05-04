@@ -107,6 +107,14 @@ const data = [
     status: false 
   }
 ];
+
+
+// destructure
+
+let[id1]=data;
+console.log(id1);
+
+
 console.log(data.map((i) => {return i})); 
 // data.map((d,i) => console.log(d.id,d.name));
 
@@ -120,6 +128,9 @@ console.log(ans);
 
 let ans1 = data.reduce((acc, d, i) => acc + d.price, 0);
 console.log(ans1);
+
+
+
 const emp =[
   {
     name: 'amit',
@@ -157,6 +168,11 @@ const emp =[
     status: true
   }
 ];
+
+// destructure
+
+let[name]=emp;
+console.log(name);
 
 console.log(emp.map((i) => {return i})); 
 // emp.map((d,i) => console.log(d.id,d.name));
@@ -260,7 +276,7 @@ console.log(eman);
         </tbody>
     </table>
 
-    <br></br>
+   ~ <br></br>
         <h4>Employee Data-1</h4>
     <table border = "1">
         <tr>
