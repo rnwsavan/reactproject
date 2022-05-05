@@ -4,11 +4,11 @@ class Country extends Component {
     constructor(props) {
         super(props);
         this.state={
-            Country:'India'
+            Country : 'India'
         }
-        changeCountry=()=>{
+        this.changeCountry=()=>{
             this.setState({
-                Country:'U.K'
+                Country : 'U.K'
             })
         }
     }
@@ -16,7 +16,7 @@ class Country extends Component {
     render() {
         return (
             <div>
-                    <p>Country:{Country}</p>
+                    <p>Country : {this.state.Country}</p>
                     <button onClick={()=>this.changeCountry()}>Change</button>
             </div>
         );
