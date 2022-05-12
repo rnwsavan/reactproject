@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-function City_Fac(props) {
+function City_Fac({fampla}) {
     const[State,setstate]=useState('Gujarat');
     const[city,setcity]=useState('Surat');
 
@@ -9,6 +9,7 @@ function City_Fac(props) {
     }
     return (
         <div>
+           
              <p>Country Name : {State}</p>
             <button onClick={()=>changestate()}>Change State</button>
 
