@@ -7,18 +7,37 @@ import City_Fac from './containers/Class/Function/City_Fac';
 import Rnw_Branch_Fun from './containers/Class/Function/Rnw_Branch_Fun';
 import Time_CL from './containers/Class/Time_CL';
 import TimeFun from './containers/Class/Function/TimeFun';
+import { useEffect, useState } from 'react';
+import Loading from './component/Load/Loading';
+import Du_Home from './containers/Home/Du_Home';
+
+const HomeWithLoading = Loading(Du_Home)
 
 function App() {
 
+    const [loading, setLoading]=useState(false);
+    const [data, setData]=useState([]);
+
+    let dumiData=[
+      {id:241, name:"Jeck", age:24},
+      {id:432, name:"Tom", age:27},
+      {id:345, name:"Mayank", age:30}
+    ]
+
+    useEffect(
+      ()=>{
+        setLoading(true);
+        setTimeout(()=>{setLoading(false); setData(dumiData)},3000);
+      },
+    [])
+    // console.log(loading,data);
+
   return (
     <>
-     {/* <Country/>
-    <City/> 
-    <Country_Fac/>
-    <City_Fac/> */}
-    {/* <Rnw_Branch_Fun/> */}
-    {/* <Time_CL/> */}
-    <TimeFun/>
+    <HomeWithLoading
+      TryLoading={loading}
+      DimData={data}
+    />
     
     </>
   );
