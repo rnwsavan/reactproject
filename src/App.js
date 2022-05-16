@@ -10,6 +10,9 @@ import TimeFun from './containers/Class/Function/TimeFun';
 import { useEffect, useState } from 'react';
 import Loading from './component/Load/Loading';
 import Du_Home from './containers/Home/Du_Home';
+import Counter from './containers/Class/Function/Counter';
+
+<Counter/>
 
 const HomeWithLoading = Loading(Du_Home)
 
