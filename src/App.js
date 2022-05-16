@@ -12,7 +12,7 @@ import Loading from './component/Load/Loading';
 import Du_Home from './containers/Home/Du_Home';
 import Counter from './containers/Class/Function/Counter';
 
-<Counter/>
+
 
 const HomeWithLoading = Loading(Du_Home)
 
@@ -37,13 +37,16 @@ function App() {
 
   return (
     <>
-    <HomeWithLoading
+    {/* <HomeWithLoading
       TryLoading={loading}
       DimData={data}
-    />
-    
+    /> */}
+    <Counter/>
     </>
   );
+  
 }
+
+
 
 export default App;
